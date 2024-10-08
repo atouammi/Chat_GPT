@@ -96,7 +96,7 @@ if uploaded_file:
     st.text_area("Extracted Text", extracted_text, height=200)
 
     if st.button("Use Extracted Text as Prompt"):
-        st.session_state.messages.append({"role": "user", "content": extracted_text})
+        st.session_state.messages.append({"role": "user", "content": "summarize this :"+ extracted_text})
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
