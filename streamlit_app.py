@@ -86,7 +86,7 @@ with col2:
     )
 
 # PDF Upload functionality
-uploaded_file = st.file_uploader("Upload a PDF", type=["pdf"])
+uploaded_file = st.file_uploader("Upload a PDF and use it as push and ", type=["pdf"])
 
 if uploaded_file:
     with open("uploaded_pdf.pdf", "wb") as f:
@@ -105,7 +105,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Function to generate chat responses
-def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
+def generate_chat_responses(chat_completion) :
     """Yield chat response content from the Groq API response."""
     for chunk in chat_completion:
         if chunk.choices[0].delta.content:
