@@ -20,9 +20,9 @@ def icon(emoji: str):
     )
 
 
-icon("🙋🏼‍♂️🙋🏼‍♂️🙋🏼‍♂️🙋🏼‍♂️🙋🏼‍♂️ Hello !!")
+icon("🙋🏼‍♂️🙋🏼‍♂️🙋🏼‍♂️🙋🏼‍♂️🙋🏼‍♂️ Let's have fun with LLM !!")
 
-st.subheader("By Atou", divider="rainbow", anchor=False)
+st.subheader("By Atou and Jeremy", divider="rainbow", anchor=False)
 
 # the api_key
 
@@ -34,7 +34,7 @@ api_key = os.getenv("GROQ_API_KEY")
 
 
 if api_key:
-    st.write(f"Your API key is: {api_key}")
+    st.write("API well set")
 else:
     st.error("GROQ_API_KEY is missing!")
 
