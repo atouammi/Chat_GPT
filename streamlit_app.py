@@ -86,7 +86,7 @@ with col2:
     )
 
 # PDF Upload functionality
-uploaded_file = st.file_uploader("Upload a PDF and use it as push and ", type=["pdf"])
+uploaded_file = st.file_uploader("Upload a PDF and use it as prompt and ask your question about it ", type=["pdf"])
 
 if uploaded_file:
     with open("uploaded_pdf.pdf", "wb") as f:
